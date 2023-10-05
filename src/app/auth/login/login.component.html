@@ -1,0 +1,34 @@
+<div class="container vh-100">
+    <div class="row justify-content-center h-100">
+        <div class="card my-auto shadow">
+            <div class="card-body px-5">
+                <div class="text-center">
+                    <h2>Welcome</h2><i class="fa-solid fa-user"></i>
+                    <p style="color: lightslategray; text-align: center;">
+                        Please enter your login details</p>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" formControlName="email" name="email" />
+                            <div class="alert alert-danger" *ngIf="loginForm.get('email')?.pristine && loginFormSubmit">
+                                Email is required!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" formControlName="password"
+                                name="password" />
+                            <div class="alert alert-danger"
+                                *ngIf="loginForm.get('password')?.invalid && loginFormSubmit">Password is required!
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <small><a [routerLink]="['/forgot-password']" class="btn btn-link">Forgot
+                                    Password</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
