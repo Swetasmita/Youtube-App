@@ -6,15 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './layout/header/header.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { VideoComponent } from './layout/video/video.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,   
-    SideNavComponent
+    SidebarComponent, VideoComponent
   ],
   imports: [
     BrowserModule,

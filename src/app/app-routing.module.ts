@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SideNavComponent } from './side-nav/side-nav.component';
 import { AuthComponent } from './auth/auth.component';
 import { authGuard } from './core/guards/auth.guard';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { VideoComponent } from './layout/video/video.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SideNavComponent
+    component: SidebarComponent
+  },
+  {
+    path: 'video',
+    component: VideoComponent
   },
   {
     path: 'login', 
